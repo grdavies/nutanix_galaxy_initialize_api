@@ -21,4 +21,3 @@
   debug:
     var: prism_type
   when: global_debug
-

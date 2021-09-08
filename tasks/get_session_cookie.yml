@@ -39,4 +39,3 @@
   debug:
     var: session_cookie
   when: global_debug
-
