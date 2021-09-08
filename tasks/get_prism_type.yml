@@ -13,11 +13,11 @@
   register: login
   ignore_errors: no
 
-- name: Set fact for prism instance type # pe == prism element, pc == prism central
+- name: Set fact prism_type # pe == prism element, pc == prism central
   set_fact:
     prism_type: "{{ login.x_ntnx_env|lower }}"
 
-- name: Debug | Print prism cluster type
+- name: Debug | Print fact prism_type
   debug:
     var: prism_type
   when: global_debug

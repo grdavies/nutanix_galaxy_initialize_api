@@ -31,16 +31,12 @@
   register: login
   ignore_errors: no
 
-- name: Debug | Print login returned data
-  debug:
-    var: login
-  when: global_debug
-
-- name: Debug | Print authorization cookie
-  debug:
-    var: login.set_cookie
-  when: global_debug
-
-- name: Set fact for session cookie
+- name: Set fact session_cookie
   set_fact:
     session_cookie: "{{ login.set_cookie }}"
+
+- name: Debug | Print session_cookie
+  debug:
+    var: session_cookie
+  when: global_debug
+
