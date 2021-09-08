@@ -1,3 +1,4 @@
 ---
 # main.yml tasks file for nutanix-initialize-api
 - import_tasks: get_session_cookie.yml
+- import_tasks: get_prism_type.yml

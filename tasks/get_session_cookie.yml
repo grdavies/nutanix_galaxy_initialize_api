@@ -2,7 +2,7 @@
 #Authorize to the cluster and register a cookie to be used for future API calls
 - name: Set fact for basic authorization string
   set_fact:
-    auth_string: "{{ prism_central_user }}:{{ prism_central_password }}"
+    auth_string: "{{ prism_user }}:{{ prism_password }}"
 
 - name: Debug | Print Basic authorization string
   debug:
@@ -20,7 +20,7 @@
 
 - name: Auth to the cluster
   uri:
-    url: "{{ prism_central_api_v3 }}/users/me"
+    url: "{{ prism_api_v3 }}/users/me"
     method: GET
     validate_certs: "{{ validate_certs }}"
     body_format: json
