@@ -1,7 +1,7 @@
 galaxy_info:
   author: Ross Davies
-  description: Ansible role to initialize connectivity to the Nutanix API
-  role_name: nutanix_role_init_api
+  description: Ansible role to initialize connectivity to the Nutanix Prism API
+  role_name: nutanix_prism_role_init_api
   namespace: grdavies
 
   # If the issue tracker for your role is not on github, uncomment the
