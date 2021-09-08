@@ -29,12 +29,21 @@
     status_code: 200
     return_content: yes
   register: login
-  ignore_errors: yes
+  ignore_errors: no
+
+- name: Debug | Print login returned data
+  debug:
+    var: login
+  when: global_debug
 
 - name: Debug | Print authorization cookie
   debug:
     var: login.set_cookie
   when: global_debug
+
+#- name: Set fact for prism instance type # pe == prism element, pc == prism central
+#  set_fact:
+#    prism_type: "{{ login.set_cookie }}"
 
 - name: Set fact for session cookie
   set_fact:
