@@ -9,6 +9,6 @@ api_version: "3"
 prism_central_ip: 192.168.1.8
 prism_central_api_v3: "https://{{ prism_central_ip }}:9440/api/nutanix/v{{ api_version }}"
 prism_central_karbon_api: "https://{{ prism_central_ip }}:9440/karbon"
-prism_user: "admin"
-prism_password: ""
+prism_central_user: "admin"
+prism_central_password: ""
 validate_certs: no
