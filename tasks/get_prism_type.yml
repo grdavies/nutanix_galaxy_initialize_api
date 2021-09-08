@@ -1,0 +1,23 @@
+---
+#Get the type of Prism instance which we are connecting with
+- name: Connect to the cluster
+  uri:
+    url: "{{ prism_api_v3 }}/users/me"
+    method: GET
+    validate_certs: "{{ validate_certs }}"
+    body_format: json
+    headers:
+      Cookie: "{{ session_cookie }}"
+    status_code: 200
+    return_content: yes
+  register: login
+  ignore_errors: no
+
+- name: Debug | Print login returned data
+  debug:
+    var: login
+  when: global_debug
+
+#- name: Set fact for prism instance type # pe == prism element, pc == prism central
+#  set_fact:
+#    prism_type: "{{ login.set_cookie }}"

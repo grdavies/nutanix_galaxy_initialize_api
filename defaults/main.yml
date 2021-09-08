@@ -8,9 +8,9 @@ global_debug: false
 prism_ip: 192.168.1.8
 prism_user: "admin"
 prism_password: ""
-prism_api_v3: "https://{{ prism_central_ip }}:9440/api/nutanix/v3"
-prism_api_v2: "https://{{ prism_central_ip }}:9440/PrismGateway/services/rest/v2.0"
-prism_api_v1: "https://{{ prism_central_ip }}:9440/PrismGateway/services/rest/v1"
-prism_central_karbon_api: "https://{{ prism_central_ip }}:9440/karbon"
+prism_api_v3: "https://{{ prism_ip }}:9440/api/nutanix/v3"
+prism_api_v2: "https://{{ prism_ip }}:9440/PrismGateway/services/rest/v2.0"
+prism_api_v1: "https://{{ prism_ip }}:9440/PrismGateway/services/rest/v1"
+prism_central_karbon_api: "https://{{ prism_ip }}:9440/karbon"
 prism_type: ""
 validate_certs: no
