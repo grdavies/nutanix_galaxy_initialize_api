@@ -13,11 +13,12 @@
   register: login
   ignore_errors: no
 
-- name: Debug | Print login returned data
+- name: Set fact for prism instance type # pe == prism element, pc == prism central
+  set_fact:
+    prism_type: "{{ login.x_ntnx_env|lower }}"
+
+- name: Debug | Print prism cluster type
   debug:
-    var: login
+    var: prism_type
   when: global_debug
 
-#- name: Set fact for prism instance type # pe == prism element, pc == prism central
-#  set_fact:
-#    prism_type: "{{ login.set_cookie }}"

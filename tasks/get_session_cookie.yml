@@ -41,10 +41,6 @@
     var: login.set_cookie
   when: global_debug
 
-#- name: Set fact for prism instance type # pe == prism element, pc == prism central
-#  set_fact:
-#    prism_type: "{{ login.set_cookie }}"
-
 - name: Set fact for session cookie
   set_fact:
     session_cookie: "{{ login.set_cookie }}"
